@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lost Property Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+<div class="eyebrow">Fieldwork / Masterplan M008</div>
+<h1>Lost Property Finder</h1>
+<p class="lede">A desk volunteer needs to find items recorded before a chosen day without changing the original list.</p>
+</header>
+<main id="main" tabindex="-1">
+<section class="panel">
+<h2>Search the fixture register</h2>
+<form id="finder" novalidate>
+<label for="cutoff">Found strictly before</label>
+<input id="cutoff" type="date" value="2026-10-03">
+<button>Find older items</button>
+</form>
+<output id="result" aria-live="polite">Choose a cutoff. Items found on that day are excluded.</output>
+<ul id="matches">
+</ul>
+</section>
+<section>
+<h2>Original register</h2>
+<p>These five records remain unchanged after every search.</p>
+<pre id="source">
+</pre>
+</section>
+</main>
+<footer>Fictional local learning project. No account, tracking or external service. <a href="https://github.com/elirc/masterplan-008-lost-property-finder">Code and learning guide</a>
+</footer>
+<script type="module" src="app.js">
+</script>
+</body>
+</html>
