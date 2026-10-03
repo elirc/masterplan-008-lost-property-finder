@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-03T22:01:52.963090+00:00",
+  "nodeVersion": "v22.16.0",
+  "nodeChecks": {
+    "command": "node --test",
+    "exitCode": 0,
+    "tests": 6,
+    "output": "TAP version 13\n# Subtest: strict cutoff excludes the equality boundary\nok 1 - strict cutoff excludes the equality boundary\n  ---\n  duration_ms: 9.081\n  type: 'test'\n  ...\n# Subtest: empty and all-result cases\nok 2 - empty and all-result cases\n  ---\n  duration_ms: 1.5971\n  type: 'test'\n  ...\n# Subtest: real dates and leap years are validated\nok 3 - real dates and leap years are validated\n  ---\n  duration_ms: 0.808\n  type: 'test'\n  ...\n# Subtest: malformed cutoff is rejected\nok 4 - malformed cutoff is rejected\n  ---\n  duration_ms: 1.8095\n  type: 'test'\n  ...\n# Subtest: source records are untouched and returned objects are independent shallow copies\nok 5 - source records are untouched and returned objects are independent shallow copies\n  ---\n  duration_ms: 0.9085\n  type: 'test'\n  ...\n# Subtest: malformed records, duplicates and non-arrays are rejected\nok 6 - malformed records, duplicates and non-arrays are rejected\n  ---\n  duration_ms: 1.0742\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 531.7152\n"
+  },
+  "browserChecks": {
+    "id": 8,
+    "status": "passed",
+    "checks": [
+      "No document horizontal overflow at 1200, 800, 500 and 320 CSS pixels",
+      "First Tab exposes skip link; Enter transfers focus to main",
+      "Strict cutoff gives two matches, empty result clears list and source remains unchanged"
+    ],
+    "browser": "Installed Microsoft Edge via Playwright",
+    "checkedAt": "2026-10-03T21:55:23.068219+00:00",
+    "consoleErrors": []
+  },
+  "scope": "Actual local reference verification. Learner stories are not implemented. Remote CI results are separate."
+}

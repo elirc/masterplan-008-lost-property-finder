@@ -1,0 +1,11 @@
+# Your independent variation
+
+Read [the six practice stories](../docs/05-PRACTICE-STORIES.md), choose one, and create a branch with `git switch -c practice/story-01`.
+
+Before code, record the expected behavior, one boundary input and a design decision in your own ignored `my-journal/` folder. Use [the template](../docs/JOURNAL-TEMPLATE.md). Keep main as the working reference. The shipped tests verify the reference; they do not mean your chosen story is already complete.
+
+Start with **Add an inclusive mode**. Add an explicit option controlling whether the cutoff day matches.
+
+Acceptance: Both modes have an equality test and the UI names the selected meaning.
+
+Do not copy an answer before trying. After your first attempt, use [the hints](../docs/06-HINTS-AND-ANSWERS.md), then ask for a review with a concrete diff and observed result.
