@@ -14,13 +14,13 @@ The smallest useful result answers this user need: A desk volunteer needs to fin
 
 The input format is deliberately narrow: a four-digit year, two-digit month and two-digit day, with year at least one. The validator first checks the shape, then actual calendar limits including leap years. A regular expression alone cannot reject every impossible date such as April 31.
 
-**Pause and produce evidence:** Cutoff 2026-10-03. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** 2026-02-29. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 2: Trace the loop manually
 
 Write the cutoff next to each of the five found dates and mark true or false for strict comparison. Only after completing that table should you run the function. Preserving input order means the output order follows the fixture, not an unexplained sort. If you want sorted results later, it must be an explicit new behavior.
 
-**Pause and produce evidence:** Cutoff 2026-10-01. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Cutoff 2026-10-03. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Step 3: Protect the caller’s records
 
@@ -32,11 +32,11 @@ The function creates a result array and copies each accepted flat item. It does 
 
 The UI clears prior result elements before each new search. An empty result gets an ordinary message rather than an exception. Invalid input follows a separate error path. That distinction prevents yesterday’s successful results from remaining on screen under a new, unsuccessful search.
 
-**Pause and produce evidence:** 2024-02-29. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
+**Pause and produce evidence:** Cutoff 2026-10-01. Predict the outcome, then compare it with the reference. In your notes, distinguish what the code says should happen from what you actually observed.
 
 ## Keep the implementation reviewable
 
-A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process. M001 additionally contains the actual two-file baseline and a separate opening-time correction.
+A useful commit has one understandable reason to exist. Separate the initial working slice, the checks that expose its important boundaries, and the teaching material that explains it. The published commits in this repository were assembled from verified working files; they are real commits, not fabricated evidence of a long historical development process.
 
 For your own variation, commit at a point where the behavior and evidence agree. Describe the trigger, the resulting behavior and the check in the commit message or review note. Avoid mixing a rule change with unrelated formatting because it makes the learning decision harder to see.
 

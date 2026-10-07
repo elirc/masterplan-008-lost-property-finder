@@ -104,9 +104,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Find items between two explicit bounds.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Define inclusivity for both ends; validate start before end; combine comparisons without mutating records.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Define inclusivity for both ends; validate start before end; combine comparisons without mutating records. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Equal bounds and reversed bounds follow documented different policies.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Equal bounds and reversed bounds follow documented different policies. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose inclusive or exclusive endpoints. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -114,9 +114,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Add a derived summary without sorting the source.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Compute from returned matches; handle no matches; keep result order unchanged.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Compute from returned matches; handle no matches; keep result order unchanged. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Earliest-day summary agrees with the list and is absent when empty.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Earliest-day summary agrees with the list and is absent when empty. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose empty-summary wording. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -124,9 +124,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Compare exact identity search with date filtering.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Accept an ID string; validate it separately; return a clearly labeled match or no-match result.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Accept an ID string; validate it separately; return a clearly labeled match or no-match result. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Duplicate labels never cause the wrong ID to be returned.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Duplicate labels never cause the wrong ID to be returned. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whitespace handling for IDs. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -134,9 +134,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Explain multiple malformed records before filtering.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Separate validation from matching in a branch; collect row-specific errors; keep invalid results from looking complete.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Separate validation from matching in a branch; collect row-specific errors; keep invalid results from looking complete. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: A bad nonmatching row is still reported.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: A bad nonmatching row is still reported. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose all-errors versus first-error policy. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -144,9 +144,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Reinforce calendar rules through examples.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Choose century and non-century years; hand-author valid and invalid days; compare with isDateOnly.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Choose century and non-century years; hand-author valid and invalid days; compare with isDateOnly. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The worksheet distinguishes 2000 from 1900 without relying only on divisibility by four.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The worksheet distinguishes 2000 from 1900 without relying only on divisibility by four. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose additional calendar examples. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -154,9 +154,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Let a reader inspect one returned flat record.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Store a selected ID; derive the displayed record from current matches; clear or explain missing selection after a new search.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Store a selected ID; derive the displayed record from current matches; clear or explain missing selection after a new search. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: A changed cutoff cannot display an unrelated stale item.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: A changed cutoff cannot display an unrelated stale item. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose missing-selection policy. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -164,9 +164,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Distinguish register size from matches.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Display source and result lengths with different labels; update after each search; avoid changing fixture data.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Display source and result lengths with different labels; update after each search; avoid changing fixture data. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Zero matches can coexist with a nonempty source register.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Zero matches can coexist with a nonempty source register. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose concise count labels. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -174,9 +174,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Improve duplicate-ID feedback at input validation.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Create a repeated-ID fixture; locate the existing duplicate check; make its diagnostic identify the conflict.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Create a repeated-ID fixture; locate the existing duplicate check; make its diagnostic identify the conflict. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: Different labels do not make a repeated ID acceptable.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: Different labels do not make a repeated ID acceptable. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose the error detail exposed. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 
@@ -184,9 +184,9 @@ Look for a concrete connection to `public/core.js` or `public/app.js`. A strong 
 
 **First hint:** The desired improvement is “Prepare for a future richer record shape.” Start by identifying which existing boundary already knows the necessary information. Do not copy that information into new state until you can explain why derivation is insufficient.
 
-**Second hint:** Follow this source-specific route: Add a separate nested metadata experiment; demonstrate shallow-copy sharing; propose a supported copy policy before changing production shape.. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
+**Second hint:** Follow this source-specific route: Add a separate nested metadata experiment; demonstrate shallow-copy sharing; propose a supported copy policy before changing production shape. Keep each stage independently inspectable. If a step requires a policy choice, write the choice before implementing it.
 
-**Third hint:** Your strongest completion evidence should establish: The guide does not claim deep immutability for the flat reference.. Invent a plausible wrong implementation and make your example disagree with it.
+**Third hint:** Your strongest completion evidence should establish: The guide does not claim deep immutability for the flat reference. Invent a plausible wrong implementation and make your example disagree with it.
 
 **Decision still left to you:** Choose whether nested metadata belongs in the next version. The guide intentionally does not settle this. Evaluate your answer by clarity of the contract, consistency of the implementation and quality of verification, not by guessing the author's preferred wording.
 

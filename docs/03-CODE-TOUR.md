@@ -11,7 +11,7 @@
 | [tools/serve.mjs](../tools/serve.mjs) | Local preview infrastructure; only public/ is served. |
 | [tools/check-site.mjs](../tools/check-site.mjs) | Checks referenced local assets exist, without pretending to judge usability. |
 | [public/core.js](../public/core.js) | The main input/output rule; no DOM access. |
-| [public/app.js](../public/app.js) | Browser events, parsing, rendering and visible errors. |
+| [public/app.js](../public/app.js) | Browser events, rendering of matches and visible errors; the cutoff string is passed to the core unparsed. |
 | [test/core.test.js](../test/core.test.js) | Independent boundary examples for the core contract. |
 | [public/fixtures.js](../public/fixtures.js) | Small fictional inputs designed to expose important distinctions. |
 
@@ -19,7 +19,7 @@
 
 Start at [public/core.js](../public/core.js) and locate `findBefore and isDateOnly`. Use this trace as a map: Cutoff 2026-10-03 is validated → loop checks LP-01 through LP-05 → 01 and 02 are strictly earlier → 03 is equal and excluded → new shallow objects for the first two items enter a new result array.
 
-The tooling is intentionally separate from the product concept. You can study the local server or CI after the main rule is clear. Neither an HTTP preview server nor a workflow configuration should become a prerequisite for understanding an inline-block box or a small pure function.
+The tooling is intentionally separate from the product concept. You can study the local server or CI after the main rule is clear. Neither an HTTP preview server nor a workflow configuration should become a prerequisite for understanding a small pure function.
 
 ## Decision: Use a date-only domain
 
@@ -47,9 +47,9 @@ A fresh array and shallow copies protect the flat fixture records from accidenta
 
 ## Change boundaries
 
-A small change should begin in the file that owns its meaning. Change domain rules in the core, wording and interaction in the browser adapter, and layout in the relevant CSS rule. For the static references, semantic information belongs in HTML before styling. For the Git reference, the staged snapshot boundary belongs in the helper rather than being guessed from editor state.
+A small change should begin in the file that owns its meaning. Change domain rules in the core (`public/core.js`), wording and interaction in the browser adapter (`public/app.js`), and layout in the relevant CSS rule.
 
-If a story crosses two files, say why. A new unit, weather option or UI station may require a contract, a control and tests to change together. That is a coherent feature boundary, not permission to rewrite unrelated parts of the project.
+If a story crosses two files, say why. A new option may require the core contract, a control and tests to change together. That is a coherent feature boundary, not permission to rewrite unrelated parts of the project.
 
 ## Deliberate limits
 

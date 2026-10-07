@@ -6,9 +6,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 01: Add an inclusive mode
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Add an explicit option controlling whether the cutoff day matches.
+**Hint 1 — ownership:** Begin from the `item.foundOn < cutoff` comparison in `findBefore`. Add an explicit option controlling whether the cutoff day matches.
 
-**Hint 2 — reasoning:** Revisit the decision “Use a date-only domain”. Ask yourself: Explain why the shape and actual calendar validity must be checked before string comparison.
+**Hint 2 — reasoning:** Revisit the decision “Keep the cutoff strictly before”. Ask yourself: State the expected result before deciding between < and <=.
 
 **Answer direction:** A defensible solution demonstrates this observable result: Both modes have an equality test and the UI names the selected meaning. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -16,9 +16,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 02: Show a result count
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Add a summary derived from the returned array.
+**Hint 1 — ownership:** Begin from the summary message in the submit handler of `public/app.js`. Add a summary derived from the returned array.
 
-**Hint 2 — reasoning:** Revisit the decision “Keep the cutoff strictly before”. Ask yourself: State the expected result before deciding between < and <=.
+**Hint 2 — reasoning:** Revisit the decision “Build a new result with a manual loop”. Ask yourself: Explain which mutation would still be shared if you later add a nested metadata object.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The count is zero for no matches and never uses the source array length by mistake. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -26,7 +26,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 03: Add a category filter
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Extend the flat fixture with a category and combine the two rules.
+**Hint 1 — ownership:** Begin from the item validation in `findBefore` and `public/fixtures.js`. Extend the flat fixture with a category and combine the two rules.
 
 **Hint 2 — reasoning:** Revisit the decision “Build a new result with a manual loop”. Ask yourself: Explain which mutation would still be shared if you later add a nested metadata object.
 
@@ -36,7 +36,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 04: Make chronological sorting optional
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Return a sorted copy when the user requests it.
+**Hint 1 — ownership:** Begin from the result array built by `findBefore`. Return a sorted copy when the user requests it.
 
 **Hint 2 — reasoning:** Revisit the decision “Use a date-only domain”. Ask yourself: Explain why the shape and actual calendar validity must be checked before string comparison.
 
@@ -46,9 +46,9 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 05: Improve invalid-date feedback
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Return or display a more specific explanation for an impossible calendar day.
+**Hint 1 — ownership:** Begin from `isDateOnly`. Return or display a more specific explanation for an impossible calendar day.
 
-**Hint 2 — reasoning:** Revisit the decision “Keep the cutoff strictly before”. Ask yourself: State the expected result before deciding between < and <=.
+**Hint 2 — reasoning:** Revisit the decision “Use a date-only domain”. Ask yourself: Explain why the shape and actual calendar validity must be checked before string comparison.
 
 **Answer direction:** A defensible solution demonstrates this observable result: The validator still rejects the value rather than normalizing it silently. The exact code is not prescribed. If your change achieves that result by changing an unrelated original rule, revise either the implementation or the story contract explicitly.
 
@@ -56,7 +56,7 @@ There are intentionally no complete feature patches here. Use one hint, return t
 
 ## Story 06: Add a clear-results action
 
-**Hint 1 — ownership:** Begin from `findBefore and isDateOnly`. Clear only the current matches and result message.
+**Hint 1 — ownership:** Begin from the `#matches` list and `#result` message in `public/app.js`. Clear only the current matches and result message.
 
 **Hint 2 — reasoning:** Revisit the decision “Build a new result with a manual loop”. Ask yourself: Explain which mutation would still be shared if you later add a nested metadata object.
 

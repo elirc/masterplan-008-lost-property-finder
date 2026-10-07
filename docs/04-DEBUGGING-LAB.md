@@ -12,7 +12,7 @@ These are deliberately proposed defects for a scratch branch. They are not claim
 
 ### Worked diagnosis
 
-First state the expected contract: Each flat item has a unique string id, a nonblank label and a real YYYY-MM-DD foundOn date. The cutoff is exclusive. Results preserve source order, return new shallow item objects and never update the input array. Then create the smallest example from the experiment above. Compare the observed result with the contract before changing more code. The likely cause is at this boundary: **Restore the documented exclusive comparison.** Repair that boundary, rerun the example, and check one neighboring valid case so the repair does not merely special-case the chosen input.
+First restate the expected contract from the [concepts guide](02-CONCEPTS-AND-TRACES.md#the-exact-contract) in your own words. Then create the smallest example from the experiment above. Compare the observed result with the contract before changing more code. The likely cause is at this boundary: **Restore the documented exclusive comparison.** Repair that boundary, rerun the example, and check one neighboring valid case so the repair does not merely special-case the chosen input.
 
 The completed reasoning record is: symptom → contract violated → input that distinguishes hypotheses → owning line or rule → minimal repair → regression evidence. This is a worked diagnostic route; fill in your actual outputs when you run it. No invented console transcript is supplied.
 

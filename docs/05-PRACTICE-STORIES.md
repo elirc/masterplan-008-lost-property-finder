@@ -6,8 +6,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 01: Add an inclusive mode
 
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Add an explicit option controlling whether the cutoff day matches.
 
 **Implementation plan:**
@@ -26,8 +24,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 02: Show a result count
-
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Add a summary derived from the returned array.
 
@@ -48,8 +44,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 03: Add a category filter
 
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Extend the flat fixture with a category and combine the two rules.
 
 **Implementation plan:**
@@ -68,8 +62,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 04: Make chronological sorting optional
-
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Return a sorted copy when the user requests it.
 
@@ -90,8 +82,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 
 ## Story 05: Improve invalid-date feedback
 
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
-
 **Feature boundary:** Return or display a more specific explanation for an impossible calendar day.
 
 **Implementation plan:**
@@ -110,8 +100,6 @@ These are new exercises beyond the finished reference. No story is marked comple
 **Stretch only after completion:** add one adversarial example that a plausible but incorrect solution would fail. Explain why that example is more informative than adding three ordinary examples.
 
 ## Story 06: Add a clear-results action
-
-**User need:** As a learner or user of Lost Property Finder, I want this small improvement so the behavior is easier to use, explain or verify.
 
 **Feature boundary:** Clear only the current matches and result message.
 
